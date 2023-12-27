@@ -19,8 +19,12 @@
     <input type="text" th:field="*{email}" id="email"/>
     <div style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</div>
     <br/>
+    <label for="date_of_birth">Enter Date of BirthDay(dd/mm/yyyy): </label>
+    <input type="date" name="Date" th:field="*{dateOfBirth}" id="date_of_birth"/>
+    <div style="color:red" th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}">Date of birth Error</div>
+    <br/>
     <input type="submit" value="Create!"/>
 </form>
-
+<script>document.getElementById('date_of_birth').valueAsDate = new Date();</script>
 </body>
 </html>
